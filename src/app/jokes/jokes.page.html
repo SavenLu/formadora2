@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Trocadilhos do Chucky Norris
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-card *ngIf="joke">
+    <ion-card-header>
+      <ion-card-title>Ria com moderação!</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      {{ joke }}
+    </ion-card-content>
+  </ion-card>
+
+  <ion-button (click)="loadChuckyJokes()" expand="full">Carregar Outra Curiosidade</ion-button>
+  <ion-button (click)="irParaHome()" expand="block" class="ion-margin-top">Voltar para a Página Inicial</ion-button>
+</ion-content>
